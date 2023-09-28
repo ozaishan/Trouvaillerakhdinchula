@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+
 const Sidebar = () => {
 return (
 <div className="space-y-4 py-4 flex flex-col h-full bg-[#111827] text-white">
@@ -16,11 +17,16 @@ return (
 					/>
 			</div>
 			<h1 className=" text-2xl font-bold">
-				Trouvaille
+				Trouvaille 
 			</h1>
 		</Link>
 	</div>
 </div>
 );
+
 }
+
 export default Sidebar;
+
+
+
