@@ -63,13 +63,8 @@ return (
 			<div className="relative w-8 h-8 mr-4">
 				< Image fill alt="Logo" src= "/logo1.png" />
 			</div>
-<<<<<<< HEAD
 			<h1 className=" text-2xl font-bold">
 				Trouvaille 
-=======
-			<h1 className= {cn ("text-2xl font-bold", montserratt.className, "text-purple-700")}>
-				Trouvaille
->>>>>>> origin/master
 			</h1>
 		</Link>
 		<div className="space-y-1">

@@ -1,7 +1,7 @@
 "use client";
 
 import * as z from "zod";
-import { MessageSquare } from "lucide-react";
+import { MessageSquare, MessagesSquare, MessagesSquareIcon } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -28,7 +28,6 @@ const ConversationPage = () => {
       <Heading
         title="Conversation"
         description="Our most advanced conversation model."
-
         iconColor="text-violet-500"
         bgColor="bg-violet-500/10"
       />
