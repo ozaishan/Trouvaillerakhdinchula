@@ -12,7 +12,7 @@ return (
 				<Image
 				fill
 					alt="Logo"
-					src="/logo.jpg"
+					src="/logo.png"
 					/>
 			</div>
 			<h1 className=" text-2xl font-bold">
