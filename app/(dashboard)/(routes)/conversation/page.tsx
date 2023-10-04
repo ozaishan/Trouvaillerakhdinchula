@@ -36,8 +36,8 @@ const ConversationPage = () => {
         title="Conversation"
         description="Our most advanced conversation model."
         iconColor="text-violet-500"
-        bgColor="bg-violet-500/10"
-      />
+        bgColor="bg-violet-500/10" 
+        icon={""}      />
       <div className="px-4 lg:px-8">
         <div>
           <Form {...form}>
