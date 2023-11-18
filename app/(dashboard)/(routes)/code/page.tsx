@@ -2,7 +2,7 @@
 
 import * as z from "zod";
 import { useForm } from "react-hook-form";
-import { MessageSquare } from "lucide-react";
+import { Code } from "lucide-react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Heading } from "@/components/ui/heading";
 import { Button } from "@/components/ui/button";
@@ -18,8 +18,9 @@ import { Loader } from "@/components/ui/loader";
 import { cn } from "@/lib/utils";
 import { UserAvatar } from "@/components/ui/user-avatar";
 import { BotAvatar } from "@/components/ui/bot-avatar";
+import ReactMarkdown from "react-markdown";
 
-const ConversationPage = () => {
+const CodePage = () => {
   const router = useRouter();
   const [messages, setMessages] = useState<ChatCompletionRequestMessage[]>([]);
 
@@ -42,7 +43,7 @@ const ConversationPage = () => {
 
       var chat ={ messages: newMessages}
 
-      const response = await axios.post("/api/conversation", chat);
+      const response = await axios.post("/api/code", chat);
 
       setMessages((current) => [...current, userMessage, response.data]);
 
@@ -60,11 +61,11 @@ const ConversationPage = () => {
   return ( 
     <div>
       < Heading
-        title="Conversation"
-        description="Our most advanced conversation model."
-        icon = {MessageSquare}
-        iconColor="text-violet-500"
-        bgColor="bg-violet-500/10"       
+        title="Code Generator"
+        description="Generate Code using descriptive text."
+        icon = {Code}
+        iconColor="text-green-700"
+        bgColor="bg-green-700/10"       
       />
       
       <div className="px-4 lg:px-8">
@@ -92,7 +93,7 @@ const ConversationPage = () => {
                   <FormControl className="m-0 p-0">
                     <Input className=" border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
                     disabled={isLoading}
-                    placeholder="What is the radius of Earth?"
+                    placeholder="Newton-Raphson Method Solver"
                     {...field}
                     />
                   </FormControl>            
@@ -112,7 +113,7 @@ const ConversationPage = () => {
                 </div>
               )}
           {messages.length === 0 && !isLoading && (
-            <Empty label="No conversation started."/>
+            <Empty label="No code generated."/>
           )}
           <div className="flex flex-col-reverse gap-y-4">
               {messages.map((message) => (
@@ -123,9 +124,21 @@ const ConversationPage = () => {
                   )}
                 >
                   {message.role === "user" ? <UserAvatar/> : <BotAvatar/>}
-                  <p className="text-sm">
-                  {message.content}
-                  </p>
+                  <ReactMarkdown 
+                    components ={{
+                      pre: ({ node, ...props}) => (
+                        <div className="overflow-auto w-full my-2 bg-black/10 p-2 rounded-lg">
+                          <pre {...props} />
+                        </div>
+                      ),
+                      code: ({node, ...props}) => (
+                        <code className="bg-black/10 rounded-lg p-1" {...props} />
+                      )
+                    }}
+                    className="text-sm overflow-hidden leading-7"
+                  >
+                    {message.content || ""}
+                  </ReactMarkdown>
                 </div>
               ))}
           </div>
@@ -136,4 +149,4 @@ const ConversationPage = () => {
    );
 }
 
-export default ConversationPage;
+export default CodePage;
