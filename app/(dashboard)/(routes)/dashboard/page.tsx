@@ -67,7 +67,7 @@ const tools = [
     icon: Music,
     color: "text-emerald-500",
     bgColor: "bg-emerald-500/10",
-    href: "/conversation",
+    href: "/music",
   },
   {
     label: "Code Generator",
