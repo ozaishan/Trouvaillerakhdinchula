@@ -23,16 +23,16 @@ const routes = [
 		color: "text-violet-500",
 	},
 	{
+		label: "Code Generator",
+		icon: Code,
+		href: "/code",
+		color: "text-green-700",
+	},
+	{
 		label: "Image Generator",
 		icon: ImageIcon,
 		href: "/image",
 		color: "text-pink-700",
-	},
-	{
-		label: "Video Generator",
-		icon: VideoIcon,
-		href: "/video",
-		color: "text-orange-700",
 	},
 	{
 		label: "Music Generator",
@@ -41,10 +41,10 @@ const routes = [
 		color: "text-emerald-500",
 	},
 	{
-		label: "Code Generator",
-		icon: Code,
-		href: "/code",
-		color: "text-green-700",
+		label: "Video Generator",
+		icon: VideoIcon,
+		href: "/video",
+		color: "text-orange-700",
 	},
 	{
 		label: "Settings",
@@ -61,6 +61,7 @@ return (
 	<div className="px-3 py-2 flex-1">
 		<Link href="/dashboard" className="flex items-center pl-3 mb-14">
 			<div className="relative w-8 h-8 mr-4">
+				<Image fill alt="Logo" src="/logo.png" />
 			</div>
 			<h1 className=" text-2xl font-bold">
 				Trouvaille 
