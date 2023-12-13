@@ -4,12 +4,11 @@ import { Landingkomainelement } from "@/components/ui/landing-main";
 
 const LandingPage =() => { 
     return (
-<div className="h-full">
-  <div>
+<div className="h-full ">
 <LandingNavbar />
 <Landingkomainelement />
 
-</div>
+
 </div>
        
 

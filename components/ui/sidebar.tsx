@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Montserrat } from "next/font/google"
-import { Code, ImageIcon, LayoutDashboard, MessageSquare, Music, Settings, VideoIcon, FacebookIcon, InstagramIcon, TwitterIcon, LinkedinIcon } from 'lucide-react';
+import { Code, ImageIcon, LayoutDashboard, MessageSquare, Music, Settings, VideoIcon, FacebookIcon, InstagramIcon, TwitterIcon, LinkedinIcon, BadgeInfo, } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 
 const montserratt = Montserrat ({ weight: "600", subsets : ["latin"] })
@@ -50,6 +50,11 @@ const routes = [
 		label: "Settings",
 		icon: Settings,
 		href: "/settings",
+	},
+	{
+		label: "About Us",
+		icon: BadgeInfo,
+		href: "/about-us",
 	},
 ];
 const marketing = [

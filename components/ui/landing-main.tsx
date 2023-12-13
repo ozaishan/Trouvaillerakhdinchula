@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 export const Landingkomainelement =() =>{
 const {isSignedIn} = useAuth(); 
    return(
-        <div className="text-white bg-[#111827] font-bold py-36 text-center space-y-5">
+        <div className="text-white font-bold py-36 text-center space-y-5">
         <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl space-y-5 font-extrabold">
         <div className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-700">
         <TypewriterComponent
@@ -16,7 +16,7 @@ const {isSignedIn} = useAuth();
     strings: ["Trouvaille"],
     autoStart: true,
     loop: true,
-    delay: 500,
+    delay: 100,
     deleteSpeed: 50,
     }} />
     </div>
@@ -30,7 +30,7 @@ const {isSignedIn} = useAuth();
                         "AUDIO",
                         "IMAGES",
                         "VIDEO",
-                        "Explore the power of UI"
+                        "Explore the power of AI"
                     ],
                     autoStart: true,
                     loop: true
@@ -43,7 +43,7 @@ const {isSignedIn} = useAuth();
             <div>
 
             
-            <Link href={isSignedIn ? "/dashboard" : "/signup"}>
+            <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
             <Button variant="premium" className="md:text-lg p-4 md:p-6 rounded-full font-semibold">
                 Start Now 
             </Button>
