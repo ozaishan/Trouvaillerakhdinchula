@@ -1,7 +1,7 @@
 import { Heading } from "@/components/ui/heading";
 import { UserButton } from "@clerk/nextjs";
 import { Settings } from "lucide-react";
-
+import { ModeToggle } from "@/components/mode-toggle";
 const SettingsPage =() => {
     return(
         <div>
@@ -14,6 +14,7 @@ const SettingsPage =() => {
             />
              <UserButton afterSignOutUrl="/" /> 
              <h1> FUTURE ENHANCEMENT</h1>
+             <div className="flex items-center justify-center h-screen"> <ModeToggle /> </div>
         </div>
             );
 }
