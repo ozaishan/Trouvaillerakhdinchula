@@ -129,6 +129,24 @@ const HeroSection = () => {
     ))}
   </div>
 </section>
+ {/* Meet Our Supervisor Section */}
+<section id="supervisor" style={sectionStyle}>
+  <h1 className="text-5xl font-bold text-center text-purple-700 py-4 md:text-7xl mb-0">
+     Meet Our Supervisor
+  </h1>
+  <div className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-3 py-16 sm:py-32 md:py-48 md:flex-row md:space-x-4 md:text-left">
+    <div className="md:mt-2 md:w-1/2">
+    </div>
+    <div className="md:mt-2 md:w-4/5 ">
+      <h1 className="text-4xl font-bold mt-6 md:mt-0 md:text-7xl">Sushil Nepal</h1>
+      <p className="text-lg mt-5 mb-6 md:text-2xl">
+         <span className="font-semibold text-teal-600">Assistant Professor</span> <br />
+         <span className="font-semibold text-teal-600">Kathmandu University, Nepal</span> <br />
+         <span className="font-semibold text-teal-600">sushilnepal@ku.edu.np</span>
+      </p>
+    </div>
+  </div>
+</section>
 
 
       {/* Meet Our Developers Section */}
@@ -150,7 +168,7 @@ const HeroSection = () => {
                 className="rounded-full shadow-2xl"
               />
             </div>
-            <div className="md:mt-2 md:w-3/5">
+            <div className="md:mt-2 md:w-2/5">
               <h1 className="text-4xl font-bold mt-6 md:mt-0 md:text-7xl">{`Hi, I'm ${person.name}!`}</h1>
               <p className="text-lg mt-4 mb-6 md:text-2xl">
                 Email:{" "}

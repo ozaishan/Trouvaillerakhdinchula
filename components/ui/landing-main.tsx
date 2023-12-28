@@ -23,7 +23,7 @@ export const Landingkomainelement = () => {
             }}
           />
         </div>
-        <h1 className={`${theme === 'dark'|| theme === 'system' ? 'text-white' : 'text-black'}`}>
+        <h1 className={`${theme === 'light' ? 'text-black' : 'text-white'}`}>
   The best unified multimedia AI generation which generates
 </h1>
         <div className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-purple-700">
