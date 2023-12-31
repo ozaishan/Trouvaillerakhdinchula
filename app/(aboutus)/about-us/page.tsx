@@ -25,12 +25,12 @@ const servicesData = [
   {
     title: "Code Generation",
     description: "Generate code using descriptive text",
-    image: "/codegeneration.jpg",
+    image: "/codegeneration.png",
   },
   {
     title: "Music Generation",
     description: "turn your prompt into music",
-    image: "/musicgeneration.jpg",
+    image: "/musicgeneration.png",
   },
   {
     title: "Video Generation",
